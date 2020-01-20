@@ -1,0 +1,268 @@
+body{
+background: url("map.png") #000000 no-repeat;
+background-size: 100%;
+}
+
+div{
+color: #FFFFFF;
+font-family: Arial;
+transform: translate(-50%, -50%);
+margin-right: -50%;
+position: absolute;
+}
+
+div.clock{
+top: 47%;
+font-family: "UB-Calculator";
+opacity: 0.7; 
+left: 25%;
+font-size: 140pt;
+}
+
+
+div.date{
+position: absolute;
+top: 59%;
+opacity: 0.8; 
+left: 16%;
+font-family: "nfs";
+font-size: 25pt;
+}
+
+div.day{
+color: #FFFFFF;
+top: 59%;
+font-family: "nfs";
+opacity: 0.8; 
+left: 37%;
+font-size: 25pt;
+}
+
+div.seconds{
+color: #FFFFFF;
+font-family: "UB-Calculator";
+opacity: 0.7; 
+top: 53%;
+left: 46%;
+font-size: 25pt;
+}
+
+div.weather__city{
+color: #FFFFFF;
+top: 17%;
+opacity: 0.7; 
+left: 29%;
+font-family: "nfs";
+font-size: 40pt;
+}
+div.weather__forecast{
+color: #FFFFFF;
+top: 67%;
+font-family: "UB-Calculator";
+left: 15%;
+opacity: 0.7; 
+font-size: 70pt;
+}
+div.weather__desc{
+color: #FFFFFF;
+top: 70%;
+left: 45%;
+opacity: 0.7; 
+font-family: "nfs";
+font-size: 25pt;
+}
+div.weather__icon{
+color: #FFFFFF;
+opacity: 0.7; 
+top: 69%;
+left: 22%;
+font-size: 25pt;
+}
+
+
+
+img.hud_1{
+animation: 1s linear 0s normal none infinite running rotleft;
+-webkit-animation: 5s linear 0s normal none infinite running rotleft;
+}
+
+img.hud_2{
+animation: 1s linear 0s normal none infinite running rotrigth;
+-webkit-animation: 7s linear 0s normal none infinite running rotrigth;
+}
+
+img.hud_3{
+animation: 1s linear 0s normal none infinite running rotleft;
+-webkit-animation: 3.5s linear 0s normal none infinite running rotleft;
+}
+
+img.hud_4{
+animation: 1s linear 0s normal none infinite running rotrigth;
+-webkit-animation: 7s linear 0s normal none infinite running rotrigth;
+}
+
+img.hud_5{
+animation: 1s linear 0s normal none infinite running rotleft;
+-webkit-animation: 6s linear 0s normal none infinite running rotleft;
+}
+
+img.hud_6{
+animation: 1s linear 0s normal none infinite running rotrigth;
+-webkit-animation: 3s linear 0s normal none infinite running rotrigth;
+}
+
+img.hud_7{
+animation: 1s linear 0s normal none infinite running rotleft;
+-webkit-animation: 8s linear 0s normal none infinite running rotleft;
+}
+
+img.hud_8{
+animation: 1s linear 0s normal none infinite running rotrigth;
+-webkit-animation: 7s linear 0s normal none infinite running rotrigth;
+}
+
+img.hud_9{
+animation: 1s linear 0s normal none infinite running rotleft;
+-webkit-animation: 10s linear 0s normal none infinite running rotleft;
+}
+
+img.hud_10{
+animation: 1s linear 0s normal none infinite running rotrigth;
+-webkit-animation: 4s linear 0s normal none infinite running rotrigth;
+}
+
+img.hud_11{
+animation: 1s linear 0s normal none infinite running rotleft;
+-webkit-animation: 10s linear 0s normal none infinite running rotleft;
+}
+
+img.hud_12{
+animation: 1s linear 0s normal none infinite running rotleft;
+-webkit-animation: 7s linear 0s normal none infinite running rotleft;
+}
+
+img.hud_13{
+animation: 1s linear 0s normal none infinite running rotleft;
+-webkit-animation: 3s linear 0s normal none infinite running rotleft;
+}
+
+img.hud_14{
+animation: 1s linear 0s normal none infinite running rotrigth;
+-webkit-animation: 4s linear 0s normal none infinite running rotrigth;
+}
+
+img.hud_15{
+animation: 1s linear 0s normal none infinite running rotleft;
+-webkit-animation: 7s linear 0s normal none infinite running rotleft;
+}
+
+img.hud_date_and_day{
+margin-top: 550px;
+margin-left: 20px;
+opacity: 0.5; 
+height: 90; 
+width: 600;
+}
+
+img.hud_{
+height: 530; 
+width: 530;
+margin-top: 190px;
+margin-left: 630px;
+opacity: 0.5; 
+position: absolute;
+}
+
+
+
+.dot_huds{
+position: absolute;
+}
+
+.hud_dot_3{
+height: 265;
+width: 265;
+margin-top: 36px;
+margin-left: 36px;
+animation: 1s linear 0s normal none infinite running rotleft;
+-webkit-animation: 4s linear 0s normal none infinite running rotleft;
+}
+
+.hud_dot_8{
+height: 118;
+animation: 1s linear 0s normal none infinite running rotrigth;
+-webkit-animation: 2s linear 0s normal none infinite running rotrigth;
+width: 118;
+margin-top: 110px;
+margin-left: 110px;
+}
+
+.hud_dot{
+margin-top: 110px;
+margin-left: 110px;
+}
+
+.all_hud {
+position: absolute;
+}
+
+
+
+
+
+
+@keyframes rotleft {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes rot {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotrigth {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@-webkit-keyframes rot {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+
+@font-face {
+font-family: "UB-Calculator"; 
+src: url("fonts/UB-Calculator.ttf") format("truetype"); 
+font-style: normal; 
+font-weight: normal; 
+} 
+
+@font-face {
+font-family: "jscf"; 
+src: url("fonts/jscf.otf") format("truetype"); 
+font-style: normal; 
+font-weight: normal; 
+}
+
+@font-face {
+font-family: "nfs"; 
+src: url("fonts/nfs.ttf") format("truetype"); 
+font-style: normal; 
+font-weight: normal; 
+} 
