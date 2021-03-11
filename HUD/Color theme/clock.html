@@ -1,0 +1,70 @@
+<DOCTYPE html!>
+<html>
+
+<header>
+<meta charset="utf-8">
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script src="hud_js.js"></script>
+
+<link rel="stylesheet" href="hud_style.css">
+</header>
+
+<body>
+<div>
+<img class="wrap all_hud hud_date_and_day" src="hud_elements/hud_date_and_day.png"> 
+
+
+<div class="wrap all_hud hud_circle">
+<img class="hud_ hud_1" alt="d" src="hud_elements/hud_1.png"> 
+<img class="hud_ hud_2" alt="d" src="hud_elements/hud_2.png"> 
+<img class="hud_ hud_3" alt="d" src="hud_elements/hud_3.png"> 
+<img class="hud_ hud_4" alt="d" src="hud_elements/hud_4.png"> 
+<img class="hud_ hud_5" alt="d" src="hud_elements/hud_5.png"> 
+<img class="hud_ hud_6" alt="d" src="hud_elements/hud_6.png"> 
+<img class="hud_ hud_7" alt="d" src="hud_elements/hud_7.png"> 
+<img class="hud_ hud_8" alt="d" src="hud_elements/hud_8.png"> 
+<img class="hud_ hud_9" alt="d" src="hud_elements/hud_9.png"> 
+<img class="hud_ hud_10" alt="d" src="hud_elements/hud_10.png"> 
+<img class="hud_ hud_11" alt="d" src="hud_elements/hud_11.png"> 
+<img class="hud_ hud_12" alt="d" src="hud_elements/hud_12.png"> 
+<img class="hud_ hud_13" alt="d" src="hud_elements/hud_13.png"> 
+<img class="hud_ hud_14" alt="d" src="hud_elements/hud_14.png"> 
+<img class="hud_ hud_15" alt="d" src="hud_elements/hud_15.png"> 
+</div>
+</div>
+
+<div class="dot_div">
+<img class="hud_dot_3 dot_huds" alt="d" src="hud_elements/hud_3.png"> 
+<img class="hud_dot_8 dot_huds" alt="d" src="hud_elements/hud_8.png"> 
+<img class="hud_dot dot_huds" alt="d" src="hud_elements/hud_dot.png"> 
+</div>
+
+<div class="clock" id="clock"></div>
+<div class="date" id="date"></div>
+<div class="day" id="day"></div>
+<div class="seconds" id="seconds"></div>
+<div class="weather__city" id="weather__city"></div>
+<div class="weather__forecast" id="weather__forecast"></div>
+<div class="weather__desc" id="weather__desc"></div>
+<div class="weather__icon" id="weather__icon"></div>
+
+</body>
+<script>
+function getWeather(){
+fetch('http://api.openweathermap.org/data/2.5/weather?id=1488754&lang=ru&appid=6fac53d3d0ef2057d65d354505c6ffa0').then(function (resp) {return resp.json() }).then(function (data) {
+    //добавляем название города
+    document.querySelector('.weather__city').textContent = data.name;
+    //data.main.temp содержит значение в Кельвинах, отнимаем от  273, чтобы получить значение в градусах Цельсия
+    document.querySelector('.weather__forecast').innerHTML = Math.round(data.main.temp - 273) + '&deg;';
+    //Добавляем описание погоды
+    document.querySelector('.weather__desc').textContent = data.weather[0]['description'];
+    //Добавляем иконку погоды
+    document.querySelector('.weather__icon').innerHTML = `<img src="https://openweathermap.org/img/wn/${data.weather[0]['icon']}@2x.png">`;
+    })
+    .catch(function () {
+        //Обрабатываем ошибки
+    });
+}
+setInterval(getWeather, 60000);
+getWeather();</script>
+</html>
